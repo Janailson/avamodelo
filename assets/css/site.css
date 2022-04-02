@@ -1,0 +1,188 @@
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.text-small {
+    font-size: 85%;
+}
+
+.text-xsmall {
+    font-size: 75%;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+header .dropdown-menu {
+    min-width: 280px !important;
+}
+
+#dropdownUser1::after {
+    content: none !important;
+}
+
+.card-title {
+    font-size: 1rem !important;
+}
+
+.card-text {
+    font-size: .85rem !important;
+}
+
+.card:hover .card-img-top {
+    opacity: .5;
+}
+
+.card:hover .card-options {
+    display: block;
+}
+
+.card .card-options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    text-align: center;
+    line-height: 30px;
+    border: solid #444 1px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: none;
+}
+
+    .card .card-options a.dropdown-toggle {
+        display: block;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .card .card-options:hover {
+        background-color: #e0e0e0;
+    }
+
+    .card .card-options .dropdown-toggle::after {
+        content: none;
+    }
+
+.sp-cover img {
+    padding: 2px;
+    border: solid #fff 3px;
+    border-radius: 5px;
+}
+
+.sp-cover.selected img {
+    border: solid #444 3px;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+    font-weight: bold;
+    background-color: #fff;
+    border-bottom-color: #dee2e6;
+}
+
+    .nav-tabs .nav-link.active {
+        border-color: #fff #fff #495057;
+        border-width: 2px;
+    }
+
+    .nav-tabs .nav-link:hover {
+        color: #222;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        border-right-color: #fff;
+        isolation: isolate;
+    }
+
+.sp-conteudo-lista {
+    color: blue;
+}
+
+    .sp-conteudo-lista h5, .sp-conteudo-lista .flag {
+        font-size: 85%;
+        font-weight: bold;
+    }
+
+        .sp-conteudo-lista .flag i {
+            transition: all .2s ease;
+        }
+
+        .sp-conteudo-lista .flag.rotate i {
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+    .sp-conteudo-lista h6 {
+        font-size: 75%;
+    }
+
+    .sp-conteudo-lista .list-group-item {
+        font-size: 85%;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .sp-conteudo-lista dd a {
+        display: block;
+        padding: 16px;
+    }
+
+        .sp-conteudo-lista dd a:hover {
+            background-color: #d1d7dc;
+        }
+
+/** Form */
+form .nav-pills .nav-link {
+    color: inherit;
+}
+
+    form .nav-pills .nav-link.active {
+        background-color: #dee2e6;
+        color: inherit;
+    }
+
+form fieldset {
+    padding: 8px 16px;
+}
+
+    form fieldset legend {
+        font-size: 1rem;
+        font-weight: 600;
+        border-bottom: solid #ced4da 1px;
+        margin: 0;
+        padding-bottom: 16px;
+    }
+
+/** Mobile screen */
+@media (max-width: 500px) {
+    .navbar-nav .nav-link {
+        position: relative;
+    }
+
+        .navbar-nav .nav-link::after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+
+    .dropdown-menu {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+        .dropdown-menu .dropdown-item {
+            padding: 8px;
+        }
+}
