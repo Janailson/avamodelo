@@ -8,12 +8,21 @@ a {
     position: relative;
 }
 
+main {
+    padding-top: 24px;
+    padding-bottom: 97px;
+}
+
 .text-small {
     font-size: 85%;
 }
 
 .text-xsmall {
     font-size: 75%;
+}
+
+.text-hover-underline:hover {
+    text-decoration: underline;
 }
 
 .dropdown-toggle {
@@ -142,6 +151,21 @@ header .dropdown-menu {
             background-color: #d1d7dc;
         }
 
+.sortable li {
+    margin: 2px 0;
+    border: dashed #fff 1px;
+}
+
+    .sortable li:hover {
+        cursor: move;
+    }
+
+    .sortable li.picked {
+        border: dashed #dee2e6 1px;
+        background-color: #fbfbfb;
+        opacity: .5;
+    }
+
 /** Form */
 form .nav-pills .nav-link {
     color: inherit;
@@ -163,6 +187,41 @@ form fieldset {
         margin: 0;
         padding-bottom: 16px;
     }
+
+.select2-container {
+    display: block !important;
+}
+
+    .select2-container .select2-selection--single {
+        height: auto !important;
+    }
+
+.select2-container--default .select2-selection--single {
+    border: solid #ced4da 1px !important;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem !important;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding: 0 !important;
+    line-height: 1.5 !important;
+}
+
+.select2-selection__arrow {
+    display: none;
+}
+
+/** Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 /** Mobile screen */
 @media (max-width: 500px) {
