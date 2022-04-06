@@ -64,6 +64,7 @@ header .dropdown-menu {
     border-radius: 5px;
     background-color: #fff;
     display: none;
+    z-index: 5;
 }
 
     .card .card-options a.dropdown-toggle {
@@ -214,6 +215,21 @@ form fieldset {
 .select2-selection__arrow {
     display: none;
 }
+
+/** Exibições */
+.salvar-exibicao {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -171px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+    .salvar-exibicao.active {
+        display: block;
+    }
 
 /** Footer */
 footer {

@@ -151,14 +151,20 @@
                 </div>
             </nav>
         </header>
-        <div class="py-2 border-bottom">
+        <div class="py-2">
             <div class="container-fluid">
-                <div class="row d-flex align-items-center">
-                    <div class="col-6">
-                        <i class="fa fa-book-open fa-lg me-2"></i> Livros
+                <div class="row g-2">
+                    <div class="col-12">
+                        <div class="hstack text-small">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-hover-underline">Painel</a></li>
+                                <li class="breadcrumb-item"><a href="livros.html" class="text-hover-underline">Livros</a></li>
+                            </ol>
+                            <a href="livros.html" class="ms-auto text-dark text-hover-underline">Voltar</a>
+                        </div>
                     </div>
-                    <div class="col-6 text-end">
-                        <a href="livros.html" class="btn btn-secondary btn-sm text-small">Voltar</a>
+                    <div class="col-12">
+                        <h3>Criar Livro</h3>
                     </div>
                 </div>
             </div>
@@ -382,10 +388,9 @@
                         </div>
                     </div>
                     <hr />
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-success px-5">Salvar</button>
-                        </div>
+                    <div class="vstack gap-2 col-md-4 mx-auto">
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <a href="livros.html" class="btn btn-outline-secondary">Cancelar</a>
                     </div>
                 </form>
             </div>

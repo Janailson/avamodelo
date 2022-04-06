@@ -1,4 +1,29 @@
 jQuery(function () {
+    $('#viewsave').click(function (e) {
+        e.preventDefault();
+        $('#salvarExibicao').addClass("active");
+        $('#salvarExibicao #nome').focus();
+    });
+
+    $('#viewsaveas').click(function (e) {
+        e.preventDefault();
+        $('#salvarExibicao').addClass("active");
+        $('#salvarExibicao #nome').focus();
+    });
+
+    $('#salvarExibicao #nome').keyup(function (e) {
+        if ($(this).val().length == 0)
+            $('#salvarExibicao #salvar').attr("disabled", "disabled");
+        else
+            $('#salvarExibicao #salvar').removeAttr("disabled");
+    });
+
+    $('#salvarExibicao #cancelar').click(function () {
+        $('#salvarExibicao #nome').val("");
+        $('#salvarExibicao #salvar').attr("disabled", "disabled");
+        $('#salvarExibicao').removeClass("active");
+    });
+
     $('.sp-conteudo-lista dd').hide();
 
     $('.sp-conteudo-lista .flag').click(function (e) {

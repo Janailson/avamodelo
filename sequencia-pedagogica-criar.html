@@ -150,175 +150,205 @@
                 </div>
             </nav>
         </header>
-        <div class="py-2 border-bottom">
+        <div class="py-2">
             <div class="container-fluid">
-                <div class="row d-flex align-items-center">
-                    <div class="col-6">
-                        <i class="fa fa-book-open fa-lg me-2"></i> Sequências Pedagógicas
+                <div class="row g-2">
+                    <div class="col-12">
+                        <div class="hstack text-small">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-hover-underline">Painel</a></li>
+                                <li class="breadcrumb-item"><a href="livros.html" class="text-hover-underline">Sequências Pedagógicas</a></li>
+                            </ol>
+                            <a href="sequencias-pedagogicas.html" class="ms-auto text-dark text-hover-underline">Voltar</a>
+                        </div>
                     </div>
-                    <div class="col-6 text-end">
-                        <a href="sequencias-pedagogicas.html" class="btn btn-secondary btn-sm text-small">Voltar</a>
+                    <div class="col-12">
+                        <h3>Criar Sequência Pedagógica</h3>
                     </div>
                 </div>
             </div>
         </div>
 
-        <main class="my-4">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <h5>Criar Sequência Pedagógica</h5>
-                        <hr class="mt-1" />
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="col-form-label">Nome * <span class="text-danger">(Campo obrigatório)</span></label>
-                                    <input type="text" class="form-control" maxlength="60" />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="col-form-label">Sinopse</label>
-                                    <textarea class="form-control" rows="5"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="col-form-label">Etapa * <span class="text-danger">(Campo obrigatório)</span></label>
-                                    <select class="form-control form-select">
-                                        <option value="">Selecione</option>
-                                        <option value="2">BEBÊ 1</option>
-                                        <option value="3">BEBÊ 2</option>
-                                        <option value="4">MATERNAL 1</option>
-                                        <option value="5">MATERNAL 2</option>
-                                        <option value="6">NÍVEL 1</option>
-                                        <option value="7">NÍVEL 2</option>
-                                        <option value="9">1º ANO</option>
-                                        <option value="10">2º ANO</option>
-                                        <option value="11">3º ANO</option>
-                                        <option value="12">4º ANO</option>
-                                        <option value="13">5º ANO</option>
-                                        <option value="15">6º ANO</option>
-                                        <option value="16">7º ANO</option>
-                                        <option value="17">8º ANO</option>
-                                        <option value="18">9º ANO</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="col-form-label">Disciplina * <span class="text-danger">(Campo obrigatório)</span></label>
-                                    <select class="form-control form-select">
-                                        <option value="">Selecione</option>
-                                        <option value="2">Português</option>
-                                        <option value="4">Matemática</option>
-                                        <option value="5">História</option>
-                                        <option value="6">Geografia</option>
-                                        <option value="7">Ciências</option>
-                                        <option value="8">Inglês</option>
-                                        <option value="9">Arte</option>
-                                        <option value="55">Gramática</option>
-                                        <option value="57">Literatura</option>
-                                        <option value="58">Biologia</option>
-                                        <option value="59">Química</option>
-                                        <option value="60">Física</option>
-                                        <option value="52">Espanhol</option>
-                                        <option value="61">Filosofia</option>
-                                        <option value="62">Sociologia</option>
-                                        <option value="10">Educação Física</option>
-                                        <option value="53">Família</option>
-                                        <option value="54">Cidadania</option>
-                                        <option value="63">Ensino Religioso</option>
-                                        <option value="64">Educação Musical</option>
-                                        <option value="51">EJA Integrado</option>
-                                        <option value="48">Libras</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="col-form-label">Tag</label>
-                                    <textarea class="form-control" rows="5"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="col-form-label">Capa</label>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-12 mb-2">
-                                            <a href="#" class="sp-cover selected" data-id="1">
-                                                <img src="assets/img/capas/portugues/1.jpg" class="w-100" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-4 col-12 mb-2">
-                                            <a href="#" class="sp-cover" data-id="2">
-                                                <img src="assets/img/capas/portugues/2.jpg" class="w-100" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-4 col-12 mb-2">
-                                            <a href="#" class="sp-cover" data-id="3">
-                                                <img src="assets/img/capas/portugues/3.jpg" class="w-100" alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <main>
+            <div class="container">
+                <form id="form1">
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <ul class="nav nav-pills flex-column" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a href="#" id="geral-tab" class="nav-link active" data-bs-toggle="pill" data-bs-target="#geral" role="tab" aria-controls="geral" aria-selected="true">
+                                        Geral
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="#" id="conteudos-tab" class="nav-link" data-bs-toggle="pill" data-bs-target="#conteudos" role="tab" aria-controls="conteudos" aria-selected="true">
+                                        Conteúdos
+                                        <span class="badge"><i class="fa fa-warning text-warning"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <h6 class="mt-4">Conteúdo</h6>
-                        <hr class="mt-1" />
-                        <div class="row g-3">
-                            <div class="col-12 text-end">
-                                <a href="#" class="text-primary">[+] adicionar seção</a>
-                            </div>
-                            <div class="col-12">
-                                <dl class="border-top">
-                                    <dt class="p-3 bg-light row m-0">
-                                        <a href="#" class="col-11 text-dark p-0 secao-title">
-                                            <i class="fa-regular fa-minus-square me-2"></i>
-                                            Seção 1: Ciclo da água
-                                        </a>
-                                        <a href="#" class="text-primary col-1 text-center p-0" title="Adicionar material"><i class="fa fa-plus-circle fa-lg"></i></a>
-
-                                    </dt>
-                                    <dd class="p-3">
+                        <div class="col-lg-8 col-12 border-start">
+                            <div class="tab-content">
+                                <div id="geral" class="tab-pane fade show active" role="tabpanel" aria-labelledby="geral-tab">
+                                    <fieldset>
+                                        <legend>Criar Sequência Pedagógica</legend>
                                         <div class="row g-3">
-                                            <div class="col-11">
-                                                1. Água
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Nome * <span class="text-danger">(Campo obrigatório)</span></label>
+                                                    <input type="text" class="form-control" maxlength="60" />
+                                                </div>
                                             </div>
-                                            <div class="col-1 text-center">
-                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Sinopse</label>
+                                                    <textarea class="form-control" rows="5"></textarea>
+                                                </div>
                                             </div>
-                                            <div class="col-11">
-                                                2. Importância do ciclo da água
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Etapa * <span class="text-danger">(Campo obrigatório)</span></label>
+                                                    <select class="form-control form-select">
+                                                        <option value="">Selecione</option>
+                                                        <option value="2">BEBÊ 1</option>
+                                                        <option value="3">BEBÊ 2</option>
+                                                        <option value="4">MATERNAL 1</option>
+                                                        <option value="5">MATERNAL 2</option>
+                                                        <option value="6">NÍVEL 1</option>
+                                                        <option value="7">NÍVEL 2</option>
+                                                        <option value="9">1º ANO</option>
+                                                        <option value="10">2º ANO</option>
+                                                        <option value="11">3º ANO</option>
+                                                        <option value="12">4º ANO</option>
+                                                        <option value="13">5º ANO</option>
+                                                        <option value="15">6º ANO</option>
+                                                        <option value="16">7º ANO</option>
+                                                        <option value="17">8º ANO</option>
+                                                        <option value="18">9º ANO</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="col-1 text-center">
-                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Disciplina * <span class="text-danger">(Campo obrigatório)</span></label>
+                                                    <select class="form-control form-select">
+                                                        <option value="">Selecione</option>
+                                                        <option value="2">Português</option>
+                                                        <option value="4">Matemática</option>
+                                                        <option value="5">História</option>
+                                                        <option value="6">Geografia</option>
+                                                        <option value="7">Ciências</option>
+                                                        <option value="8">Inglês</option>
+                                                        <option value="9">Arte</option>
+                                                        <option value="55">Gramática</option>
+                                                        <option value="57">Literatura</option>
+                                                        <option value="58">Biologia</option>
+                                                        <option value="59">Química</option>
+                                                        <option value="60">Física</option>
+                                                        <option value="52">Espanhol</option>
+                                                        <option value="61">Filosofia</option>
+                                                        <option value="62">Sociologia</option>
+                                                        <option value="10">Educação Física</option>
+                                                        <option value="53">Família</option>
+                                                        <option value="54">Cidadania</option>
+                                                        <option value="63">Ensino Religioso</option>
+                                                        <option value="64">Educação Musical</option>
+                                                        <option value="51">EJA Integrado</option>
+                                                        <option value="48">Libras</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="col-11">
-                                                3. Ciclo da água e suas etapas
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Tag</label>
+                                                    <textarea class="form-control" rows="5"></textarea>
+                                                </div>
                                             </div>
-                                            <div class="col-1 text-center">
-                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
-                                            </div>
-                                            <div class="col-11">
-                                                4. Resumo do ciclo da água
-                                            </div>
-                                            <div class="col-1 text-center">
-                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Capa</label>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-12 mb-2">
+                                                            <a href="#" class="sp-cover selected" data-id="1">
+                                                                <img src="assets/img/capas/portugues/1.jpg" class="w-100" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-4 col-12 mb-2">
+                                                            <a href="#" class="sp-cover" data-id="2">
+                                                                <img src="assets/img/capas/portugues/2.jpg" class="w-100" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-4 col-12 mb-2">
+                                                            <a href="#" class="sp-cover" data-id="3">
+                                                                <img src="assets/img/capas/portugues/3.jpg" class="w-100" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <hr />
-                        <div class="row g-3">
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-success px-5">Salvar</button>
+                                    </fieldset>
+                                </div>
+                                <div id="conteudos" class="tab-pane fade" role="tabpanel" aria-labelledby="conteudos-tab">
+                                    <fieldset>
+                                        <legend>Conteúdos</legend>
+                                        <div class="row g-3">
+                                            <div class="col-12 text-end">
+                                                <a href="#" class="text-primary">[+] adicionar seção</a>
+                                            </div>
+                                            <div class="col-12">
+                                                <dl class="border-top">
+                                                    <dt class="p-3 bg-light row m-0">
+                                                        <a href="#" class="col-11 text-dark p-0 secao-title">
+                                                            <i class="fa-regular fa-minus-square me-2"></i>
+                                                            Seção 1: Ciclo da água
+                                                        </a>
+                                                        <a href="#" class="text-primary col-1 text-center p-0" title="Adicionar material"><i class="fa fa-plus-circle fa-lg"></i></a>
+
+                                                    </dt>
+                                                    <dd class="p-3">
+                                                        <div class="row g-3">
+                                                            <div class="col-11">
+                                                                1. Água
+                                                            </div>
+                                                            <div class="col-1 text-center">
+                                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                                            </div>
+                                                            <div class="col-11">
+                                                                2. Importância do ciclo da água
+                                                            </div>
+                                                            <div class="col-1 text-center">
+                                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                                            </div>
+                                                            <div class="col-11">
+                                                                3. Ciclo da água e suas etapas
+                                                            </div>
+                                                            <div class="col-1 text-center">
+                                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                                            </div>
+                                                            <div class="col-11">
+                                                                4. Resumo do ciclo da água
+                                                            </div>
+                                                            <div class="col-1 text-center">
+                                                                <a href="#" class="text-danger" title="Remover material"><i class="fa fa-times"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <hr />
+                    <div class="vstack gap-2 col-md-4 mx-auto">
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <a href="livros.html" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
             </div>
         </main>
 

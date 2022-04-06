@@ -22,8 +22,7 @@
             <nav class="navbar navbar-expand-lg navbar-light" aria-label="Menu">
                 <div class="container-fluid">
                     <a class="navbar-brand">AVA.Modelo</a>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbars"
-                            aria-controls="navbars" aria-expanded="false" aria-label="Alternar navegação">
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Alternar navegação">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -150,32 +149,70 @@
                 </div>
             </nav>
         </header>
-        <div class="py-2 border-bottom">
+        <div class="py-2">
             <div class="container-fluid">
-                <div class="row d-flex align-items-center">
-                    <div class="col-lg-6 col-12">
-                        <i class="fa fa-book-open fa-lg me-2"></i> Sequências Pedagógicas
+                <div class="row g-2">
+                    <div class="col-12">
+                        <ol class="breadcrumb text-small mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Painel</a></li>
+                        </ol>
                     </div>
-                    <div class="col-lg-6 col-12 text-end">
-                        <a href="sequencia-pedagogica-criar.html" class="btn btn-primary btn-sm text-small">
-                            <i class="fa fa-plus"></i>
-                            <span>Criar Sequência</span>
-                        </a>
+                    <div class="col-12">
+                        <h3>Sequências Pedagógicas</h3>
                     </div>
                 </div>
             </div>
         </div>
 
-        <main class="my-5">
-            <div class="container">
-                <div class="row">
+        <main>
+            <div class="container-fluid">
+                <div class="row mb-4">
+                    <div class="col-12 border-bottom position-relative">
+                        <a href="sequencia-pedagogica-criar.html" class="btn btn-outline-secondary btn-sm border-0"><i class="fa fa-plus"></i> Criar</a>
+                        <div class="dropdown">
+                            <a id="dropdownGerenciarExibicao" href="#" class="btn btn-outline-secondary btn-sm border-0 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cog"></i> Gerenciar a exibição</a>
+                            <ul class="dropdown-menu text-small" aria-labelledby="dropdownGerenciarExibicao">
+                                <li><a href="#" id="viewsave" class="dropdown-item text-dark" aria-label="Salvar a exibição"><i class="fa fa-save me-2"></i> Salvar a exibição</a></li>
+                                <li><a href="#" id="viewsaveas" class="dropdown-item text-dark" aria-label="Salvar a exibição como"><i class="fa-regular fa-save me-2"></i> Salvar a exibição como</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-muted"><i class="fa fa-cog me-2"></i> Escolher visualização favorita</a></li>
+                                <li><a href="#" class="dropdown-item text-dark"><i class="fa-regular fa-star me-2"></i> Padrão</a></li>
+                                <li><a href="#" class="dropdown-item text-dark"><i class="fa fa-filter me-2"></i> Filtro 1</a></li>
+                                <li><a href="#" id="ocExibicaoLabel" class="dropdown-item text-dark" data-bs-toggle="offcanvas" data-bs-target="#ocExibicao" aria-controls="ocExibicao"><i class="fa fa-cog me-2"></i> Procurar todas as exibições</a></li>
+                            </ul>
+                        </div>
+                        <div id="salvarExibicao" class="salvar-exibicao p-3 border-bottom shadow-sm">
+                            <div class="row g-2">
+                                <div class="col-12">
+                                    <b>Salvar a exibição atual</b>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label class="col-1 col-form-label text-small">Nome: *</label>
+                                        <div class="col-11">
+                                            <input type="text" id="nome" class="form-control form-control-sm" placeholder="inserir nome" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <small>Esta exibição está disponível somente para "Sequências Pedagógicas"</small>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" id="salvar" class="btn btn-outline-secondary btn-sm" disabled>Salvar</button>
+                                    <button type="button" id="cancelar" class="btn btn-outline-secondary btn-sm">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
                     <div class="col-lg-3 col-12">
                         <div class="input-group">
                             <input type="text" class="form-control form-control-sm" placeholder="Ex. 1º Ano" />
                             <span class="input-group-text bg-primary text-white"><i class="fa fa-search"></i></span>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-12 mt-2 mt-lg-0">
+                    <div class="col-lg-2 col-12 mt-2 mt-lg-0">
                         <select class="form-control form-select form-select-sm">
                             <option value="">Qualquer etapa</option>
                             <option value="2">BEBÊ 1</option>
@@ -195,7 +232,7 @@
                             <option value="18">9º ANO</option>
                         </select>
                     </div>
-                    <div class="col-lg-3 col-12 mt-2 mt-lg-0">
+                    <div class="col-lg-2 col-12 mt-2 mt-lg-0">
                         <select class="form-control form-select form-select-sm">
                             <option value="">Qualquer disciplina</option>
                             <option value="2">Português</option>
@@ -223,675 +260,671 @@
                         </select>
                     </div>
                 </div>
-                <hr class="my-4" />
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase2/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Cuidados com o corpo</h5>
-                                            <p class="card-text">Reconhecimento do próprio corpo e suas limitações.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Cuidados com o corpo</a>
+                                        <p class="card-text">Reconhecimento do próprio corpo e suas limitações.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase2/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Identificar materiais utilizados na escovação</h5>
-                                            <p class="card-text">Cuidar da higiene bucal.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Identificar materiais utilizados na escovação</a>
+                                        <p class="card-text">Cuidar da higiene bucal.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase1/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">A hora do banho</h5>
-                                            <p class="card-text">
-                                                Meu banho vou tomar e as partes do meu corpo a
-                                                professora vai nomear. Enquanto isso, com essa poesia, nossa brincadeira
-                                                ficará mais divertida. Vamos brincar?
-                                            </p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">A hora do banho</a>
+                                        <p class="card-text">
+                                            Meu banho vou tomar e as partes do meu corpo a
+                                            professora vai nomear. Enquanto isso, com essa poesia, nossa brincadeira
+                                            ficará mais divertida. Vamos brincar?
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase2/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Palavras Mágicas ou regras de cumprimento</h5>
-                                            <p class="card-text">Boas maneiras a conviver com as pessoas.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Palavras Mágicas ou regras de cumprimento</a>
+                                        <p class="card-text">Boas maneiras a conviver com as pessoas.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/portugues/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Produzindo arte</h5>
-                                            <p class="card-text">
-                                                Alunos seguem orientação de vídeo e fazem em casa tinta
-                                                orgânica.
-                                            </p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Produzindo arte</a>
+                                        <p class="card-text">
+                                            Alunos seguem orientação de vídeo e fazem em casa tinta
+                                            orgânica.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/portugues/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Teste da Paty seq</h5>
-                                            <p class="card-text">Teste da Paty seq</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Teste da Paty seq</a>
+                                        <p class="card-text">Teste da Paty seq</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase4/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Alimentação saudável</h5>
-                                            <p class="card-text">Vídeo e atividade.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Alimentação saudável</a>
+                                        <p class="card-text">Vídeo e atividade.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/portugues/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Arte rupestre</h5>
-                                            <p class="card-text">
-                                                O que são pinturas rupestres? Veja o vídeo e aprenda a
-                                                fazer uma.
-                                            </p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Arte rupestre</a>
+                                        <p class="card-text">
+                                            O que são pinturas rupestres? Veja o vídeo e aprenda a
+                                            fazer uma.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase4/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">teste infantil</h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">teste infantil</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase4/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">teste infantil</h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">teste infantil</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase4/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">teste infantil</h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">teste infantil</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/portugues/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">História em quadrinhos</h5>
-                                            <p class="card-text">
-                                                Qual a diferença entre História em quadrinhos e
-                                                tirinhas?
-                                            </p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">História em quadrinhos</a>
+                                        <p class="card-text">
+                                            Qual a diferença entre História em quadrinhos e
+                                            tirinhas?
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/fase4/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">teste infantil</h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">teste infantil</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/portugues/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Autorretrato</h5>
-                                            <p class="card-text">
-                                                É um retrato que uma pessoa faz de si mesma em forma de
-                                                desenho, pintura, gravura ou descrição escrita ou oral.
-                                            </p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Autorretrato</a>
+                                        <p class="card-text">
+                                            É um retrato que uma pessoa faz de si mesma em forma de
+                                            desenho, pintura, gravura ou descrição escrita ou oral.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/portugues/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Texto dramático</h5>
-                                            <p class="card-text">texto e vídeo.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Texto dramático</a>
+                                        <p class="card-text">texto e vídeo.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/educacao-fisica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Karate</h5>
-                                            <p class="card-text">atividade de lutas.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Karate</a>
+                                        <p class="card-text">atividade de lutas.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/matematica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">calendário</h5>
-                                            <p class="card-text">Uso de calendário - exercícios.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">calendário</a>
+                                        <p class="card-text">Uso de calendário - exercícios.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/ciencias/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">FUNGOS</h5>
-                                            <p class="card-text">Texto informativo e vídeo sobre fungos.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">FUNGOS</a>
+                                        <p class="card-text">Texto informativo e vídeo sobre fungos.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/ciencias/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">FUNGOS</h5>
-                                            <p class="card-text">Texto institucional e vídeo.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">FUNGOS</a>
+                                        <p class="card-text">Texto institucional e vídeo.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/matematica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Ordem crescente dos números</h5>
-                                            <p class="card-text">Ordem crescente e decrescente dos números naturais.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Ordem crescente dos números</a>
+                                        <p class="card-text">Ordem crescente e decrescente dos números naturais.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/matematica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Ordem crescente dos números</h5>
-                                            <p class="card-text">Sistema de Numeração Decimal - Ordem Crescente.</p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Ordem crescente dos números</a>
+                                        <p class="card-text">Sistema de Numeração Decimal - Ordem Crescente.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/educacao-fisica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Antônio Carlos</h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Antônio Carlos</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/educacao-fisica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Capítulo 4 - O cuidado com o corpo (suor e higiene)
-                                            </h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Capítulo 4 - O cuidado com o corpo (suor e higiene)</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-3 col-12 mb-3">
-                                <a href="sequencia-pedagogica.html" class="text-black text-decoration-none">
-                                    <div class="card shadow-sm position-relative">
+                                <div class="card shadow-sm position-relative">
+                                    <div class="ratio ratio-16x9">
                                         <img src="assets/img/capas/educacao-fisica/1.jpg" class="card-img-top" alt="" />
-                                        <div class="card-options dropdown">
-                                            <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
-                                               aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-edit me-2"></i> Alterar
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="dropdown-item text-xsmall">
-                                                        <i class="fa fa-trash me-2"></i> Excluir
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Antônio Carlos</h5>
-                                            <p class="card-text"></p>
-                                        </div>
                                     </div>
-                                </a>
+                                    <div class="card-options dropdown">
+                                        <a href="#" class="text-black dropdown-toggle" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><i class="fa fa-ellipsis-vertical"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-edit me-2"></i> Alterar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown-item text-xsmall">
+                                                    <i class="fa fa-trash me-2"></i> Excluir
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="sequencia-pedagogica.html" class="card-title text-dark fw-bold stretched-link">Antônio Carlos</a>
+                                        <p class="card-text"></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -900,6 +933,42 @@
                     <div class="col-12 text-center mt-3">
                         <button type="button" class="btn btn-outline-secondary btn-sm">Carregar mais sequências</button>
                     </div>
+                </div>
+            </div>
+
+            <div id="ocExibicao" class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" aria-labelledby="ocExibicaoLabel">
+                <div class="offcanvas-header">
+                    <h5>Exibições para "Sequências Pedagógicas"</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width: 85%">Nome</th>
+                                <th style="width: 15%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <i class="fa fa-star"></i> <a href="#" class="text-primary text-small">Padrão</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="text-muted" title="Tornar esta a visualização favorita"><i class="fa fa-star"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fa fa-filter"></i> <a href="#" class="text-primary text-small">Teste 1</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="text-primary" title="Tornar esta a visualização favorita"><i class="fa fa-star"></i></a>
+                                    <a href="#" class="text-primary" title="Excluir esta exibição"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
@@ -931,6 +1000,8 @@
 
     <!-- Basic scripts -->
     <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="assets/js/custom/sequencia-pedagogica.js"></script>
 </body>
 
 </html>
